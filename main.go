@@ -80,7 +80,7 @@ func (eh *etcdHandlers) dump(w http.ResponseWriter, r *http.Request) {
 	}
 
 	enc := json.NewEncoder(w)
-	enc.SetIndent("  ", "  ")
+	// enc.SetIndent("  ", "  ") // commented out because it required go1.7
 
 	w.Header().Set("Content-Type", "application/json")
 
