@@ -15,4 +15,4 @@ RUN apk add --update bash \
 
 EXPOSE 8080
 
-CMD [ "/up-coco-admin" , "server" ]
+CMD [ "/up-coco-admin" ]
