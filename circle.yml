@@ -9,4 +9,4 @@ dependencies:
     - ~/downloads
 test:
   pre:
-    - dredd
+    - dredd --config ./api/dredd.yml
