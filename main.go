@@ -48,6 +48,7 @@ func runServer(port int, etcdURL string) {
 	}).Methods("GET")
 
 	router.HandleFunc("/etcd-all", eh.dump).Methods("GET")
+	router.PathPrefix("/__api").Handler(http.StripPrefix("/__api", http.FileServer(http.Dir("./api/"))))
 
 	addr := fmt.Sprintf(":%d", port)
 	log.Printf("about to listen on %s\n", addr)
