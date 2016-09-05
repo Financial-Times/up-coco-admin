@@ -1,0 +1,36 @@
+swagger: '2.0'
+
+info:
+  title: UP CoCo Admin
+  description: A REST API for some handy CoCo data.
+  version: "0.0.1"
+  contact:
+    name: Martin Garton
+    email: martin.garton@ft.com
+
+host: localhost:8084
+
+schemes:
+  - http
+  - https
+
+basePath: /
+
+paths:
+  /etcd-all:
+    get:
+      summary: Returns all etcd keys on the server.
+      produces:
+        - application/json
+        - text/plain; charset=utf-8
+      tags:
+        - API
+      responses:
+        200:
+          description: Returns all etcd keys on the server as a json map.
+          schema:
+            type: object
+        500:
+          description: The provided etcd url is invalid or not responding.
+          examples:
+            text/plain; charset=utf-8: "client: response is invalid json. The endpoint is probably not valid etcd cluster endpoint."
