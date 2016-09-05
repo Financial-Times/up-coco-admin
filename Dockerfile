@@ -1,5 +1,8 @@
 FROM alpine:3.4
+
 ADD . /source/
+ADD ./api/ /api/
+
 RUN apk add --update bash \
   && apk --update add git go \
   && export GOPATH=/gopath \
