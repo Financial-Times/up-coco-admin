@@ -6,7 +6,7 @@ info:
   version: "0.0.1"
   contact:
     name: Martin Garton
-    email: martin.garton@ft.com
+    email: martin.garton@ft.com 
 
 host: localhost:8084
 
